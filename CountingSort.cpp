@@ -2,40 +2,54 @@
 // Created by Islam on 16.02.2022.
 //
 
-#include "CountingSort.h"
+#include <algorithm>
+#include <vector>
 
-CountingSort::CountingSort(int *arr, int length) {
-    this->first_arr = arr;
-    this->length = length;
+int getMax(int n, int *arr) {
+    int res = arr[0];
+    for (int i = 1; i < n; ++i) {
+        res = std::max(res, arr[i]);
+    }
+    return res;
 }
 
-CountingSort::~CountingSort() {
-    delete[] first_arr;
-    delete[] second_arr;
-}
-
-void CountingSort::sortArray() {
-    auto max_length = getMax(length);
+void countingSortArray(int *arr, int length) {
+    auto max_length = getMax(length, arr);
     int *second = new int[max_length + 1];
     for (int i = 0; i < max_length + 1; ++i) {
         second[i] = 0;
     }
     for (int i = 0; i < length; ++i) {
-        ++second[first_arr[i]];
+        ++second[arr[i]];
     }
     int index = 0;
     for (int index_iter = 0; index_iter < max_length + 1; ++index_iter) {
         for (int iteration = 0; iteration < second[index_iter]; ++iteration) {
-            first_arr[index] = index_iter;
+            arr[index] = index_iter;
             ++index;
         }
     }
 }
 
-int CountingSort::getMax(int n) {
-    int res = first_arr[0];
-    for (int i = 1; i < n; ++i) {
-        res = std::max(res, first_arr[i]);
+void radixSort(int *array, int length) {
+    int exp = 1;
+    std::vector<int> second(length * 4);
+    int max = getMax(length, array);
+    for (; max / exp > 0;) {
+        std::vector<int> box(256, 0);
+        int iteration;
+        for (iteration = 0; iteration < length; ++iteration) {
+            ++box[array[iteration] / exp % 256];
+        }
+        for (iteration = 1; iteration < 256; ++iteration) {
+            box[iteration] += box[iteration - 1];
+        }
+        for (iteration = length - 1; iteration >= 0; --iteration) {
+            second[--box[array[iteration] / exp % 256]] = array[iteration];
+        }
+        for (iteration = 0; iteration < length; ++iteration) {
+            array[iteration] = second[iteration];
+        }
+        exp *= 256;
     }
-    return res;
 }

@@ -5,9 +5,12 @@
 #include <string>
 #include <fstream>
 #include <chrono>
-#include "SelectionSort.h"
-#include "InsertionSort.h"
-#include "CountingSort.h"
+#include "./InsertionSort.cpp"
+#include "./CountingSort.cpp"
+#include "./BubbleSort.cpp"
+#include "./QuickSort.cpp"
+#include "./MergeSort.cpp"
+#include "./HeapSort.cpp"
 
 using std::cin;
 using std::cout;
@@ -37,9 +40,22 @@ void swapRandomElements(int *arr, int length);
 
 void chooseArray(int *arr, int index, int length);
 
-void countTime(const duration<float, std::milli> &time_left);
+void sortAndCountTime(int choice_sort, int start_first, int *first_arr);
+
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min_index = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_index]) {
+                min_index = j;
+            }
+        }
+        swap(arr[min_index], arr[i]);
+    }
+}
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
     sortInformation();
     cout << "Type here: ";
     int choice_sort = parseInteger();
@@ -47,95 +63,91 @@ int main() {
         int start_first = 50;
         int end_first = 300;
         int shift_first = 10;
-        /*for (int j = start_first; j < end_first; j += shift_first) {
-            int *first_arr = new int[start_first];
-            chooseArray(first_arr, i, start_first);
-            auto start = high_resolution_clock::now();
-            takeTheSort(first_arr, choice_sort, start_first);
-            auto end = high_resolution_clock::now();
-            duration<float, std::milli> time_left = end - start;
-            countTime(time_left);
-            *//*for (int k = 0; k < start_first; ++k) {
+        int *first_arr = new int[start_first];
+        for (int size = start_first; size < end_first; size += shift_first) {
+            if (start_first != size) {
+                first_arr = new int[size];
+            }
+            chooseArray(first_arr, i, size);
+            if (choice_sort >= 13) {
+
+            }
+            sortAndCountTime(choice_sort, size, first_arr);
+            /*for (int k = 0; k < size; ++k) {
                 cout << first_arr[k] << " ";
             }
-            cout << "\n";*//*
-        }*/
+            cout << "\n";*/
+        }
         int start_second = 100;
         int end_second = 4100;
         int shift_second = 100;
-        for (int j = start_second; j < end_second; j += shift_second) {
-            int *second_arr = new int[start_second];
-            chooseArray(second_arr, i, start_second);
-            cout << "Before" << "\n";
-            for (int k = 0; k < start_second; ++k) {
+        int *second_arr = new int[start_second];
+        for (int size = start_second; size < end_second; size += shift_second) {
+            if (start_second != size) {
+                second_arr = new int[size];
+            }
+            chooseArray(second_arr, i, size);
+            if (choice_sort >= 13) {
+
+            }
+            sortAndCountTime(choice_sort, size, second_arr);
+           /* for (int k = 0; k < size; ++k) {
                 cout << second_arr[k] << " ";
             }
-            cout << "\n";
-            cout << "After" << "\n";
-            auto start = high_resolution_clock::now();
-            takeTheSort(second_arr, choice_sort, start_second);
-            auto end = high_resolution_clock::now();
-            duration<float, std::milli> time_left = end - start;
-            // countTime(time_left);
-            for (int k = 0; k < start_second; ++k) {
-                cout << second_arr[k] << " ";
-            }
-            cout << "\n";
-            delete[] second_arr;
+            cout << "\n";*/
         }
-        break;
     }
-/*
-     // file pointer
-    fstream fout;
-    // opens an existing csv file or creates a new file.
-    fout.open("reportcard.csv", ios::out | ios::app);
-    fout << smth
-    */
+    /* // file pointer
+     ofstream fout;
+     // opens an existing csv file or creates a new file.
+     fout.open("reportcard.csv", ios::out | ios::app);
+     for (auto& row : temp_matrix) {
+         for (auto col : row)
+             out << col <<',';
+         out << '\n';
+     }*/
     return 0;
 }
 
-void countTime(const duration<float, std::milli> &time_left) {
-    auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(time_left);
-    auto sec = std::chrono::duration_cast<duration<float>>(time_left);
-    cout << sec.count() << " s" << " " << milliseconds.count() << " ms" << "\n";
+void sortAndCountTime(int choice_sort, int start_first, int *first_arr) {
+    using std::chrono::high_resolution_clock;
+    using std::chrono::duration_cast;
+    using std::chrono::duration;
+    using std::chrono::milliseconds;
+    auto start = high_resolution_clock::now();
+    takeTheSort(first_arr, choice_sort, start_first);
+    auto end = high_resolution_clock::now();
+    auto ms_int = duration_cast<milliseconds>(end - start);
+    duration<double, std::milli> ms_double = end - start;
+    std::cout << ms_int.count() << "ms\n";
+    std::cout << ms_double.count() << "ms\n";
 }
 
 void takeTheSort(int *array, int choice_sort, int length) {
     if (choice_sort == 1) {
-        SelectionSort *selection_sort = new SelectionSort(array, length);
-        selection_sort->sortArray();
-        delete selection_sort;
+        selectionSort(array, length);
     } else if (choice_sort == 2) {
-
+        bubbleSort(array, length);
     } else if (choice_sort == 3) {
-
+        bubbleSortIversonFirst(array, length);
     } else if (choice_sort == 4) {
-
+        bubbleSortIversonSecond(array, length);
     } else if (choice_sort == 5) {
-        InsertionSort *insertion_sort = new InsertionSort(array, length);
-        insertion_sort->defaultSortArray();
-        delete insertion_sort;
+        defaultSortArray(array, length);
     } else if (choice_sort == 6) {
-        InsertionSort *binary_insertion_sort = new InsertionSort(array, length);
-        binary_insertion_sort->binarySortArray();
-        delete binary_insertion_sort;
+        binarySortArray(array, length);
     } else if (choice_sort == 7) {
-        CountingSort *countingSort = new CountingSort(array, length);
-        countingSort->sortArray();
-        delete countingSort;
+        countingSortArray(array, length);
     } else if (choice_sort == 8) {
-
+        radixSort(array, length);
     } else if (choice_sort == 9) {
-
+        mergePivot(array, 0, length - 1);
     } else if (choice_sort == 10) {
-
+        hoareQuickSort(array, 0, length - 1);
     } else if (choice_sort == 11) {
-
+        lomutoQuickSort(array, 0, length - 1);
     } else if (choice_sort == 12) {
-
-    } else {
-
+        startHeapSort(array, length);
     }
 }
 
@@ -149,7 +161,6 @@ int parseInteger() {
         try {
             cin >> in;
         } catch (exception ex) {
-            cout << "Incorrect input!" << "\n";
             cin.clear();
             cin.ignore();
             continue;
@@ -180,16 +191,13 @@ void sortInformation() {
 
 void generateArr(int *arr, int end, int length) {
     for (int i = 0; i < length; ++i) {
-        int input = rand() % end;
-        // cout << input << " ";
-        arr[i] = input;
+        arr[i] = rand() % end;
     }
-    // cout << "\n";
 }
 
 void generateReversedArr(int *arr, int end, int length) {
     for (int i = 0; i < length; ++i) {
-        arr[i] = rand() % end + 1;
+        arr[i] = 1 + (rand() % end);
     }
 }
 
@@ -201,17 +209,15 @@ void swapRandomElements(int *arr, int length) {
 }
 
 void chooseArray(int *arr, int index, int length) {
-    switch (index) {
-        case 1:
-            generateArr(arr, 5, length);
-            break;
-        case 2:
-            generateArr(arr, 4000, length);
-            break;
-        case 3:
-            generateArr(arr, 4000, length);
-            swapRandomElements(arr, length);
-        default:
-            generateReversedArr(arr, 4100, length);
+    if (index == 1) {
+        generateArr(arr, 5, length);
+    } else if (index == 2) {
+        generateArr(arr, 4000, length);
+    } else if (index == 3) {
+        generateArr(arr, 4000, length);
+        swapRandomElements(arr, length);
+    } else {
+        generateReversedArr(arr, 4100, length);
     }
 }
+

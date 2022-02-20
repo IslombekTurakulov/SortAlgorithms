@@ -3,4 +3,4 @@ project(SortAlgorithms)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(SortAlgorithms main.cpp SelectionSort.cpp SelectionSort.h InsertionSort.cpp InsertionSort.h CountingSort.cpp CountingSort.h)
+add_executable(SortAlgorithms main.cpp)
