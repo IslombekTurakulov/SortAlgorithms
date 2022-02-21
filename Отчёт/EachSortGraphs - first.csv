@@ -1,0 +1,1212 @@
+Mode;Size;Selection Sort
+From 0 to 5;50;8
+From 0 to 5;60;11
+From 0 to 5;70;25
+From 0 to 5;80;12
+From 0 to 5;90;13
+From 0 to 5;100;14
+From 0 to 5;110;47
+From 0 to 5;120;22
+From 0 to 5;130;26
+From 0 to 5;140;29
+From 0 to 5;150;34
+From 0 to 5;160;37
+From 0 to 5;170;37
+From 0 to 5;180;40
+From 0 to 5;190;45
+From 0 to 5;200;49
+From 0 to 5;210;54
+From 0 to 5;220;74
+From 0 to 5;230;72
+From 0 to 5;240;79
+From 0 to 5;250;86
+From 0 to 5;260;100
+From 0 to 5;270;91
+From 0 to 5;280;97
+From 0 to 5;290;127
+From 1 to 4100;50;5
+From 1 to 4100;60;6
+From 1 to 4100;70;7
+From 1 to 4100;80;9
+From 1 to 4100;90;12
+From 1 to 4100;100;13
+From 1 to 4100;110;16
+From 1 to 4100;120;18
+From 1 to 4100;130;21
+From 1 to 4100;140;24
+From 1 to 4100;150;27
+From 1 to 4100;160;30
+From 1 to 4100;170;34
+From 1 to 4100;180;39
+From 1 to 4100;190;42
+From 1 to 4100;200;46
+From 1 to 4100;210;50
+From 1 to 4100;220;55
+From 1 to 4100;230;59
+From 1 to 4100;240;64
+From 1 to 4100;250;69
+From 1 to 4100;260;74
+From 1 to 4100;270;80
+From 1 to 4100;280;86
+From 1 to 4100;290;92
+Almost Sorted;50;5
+Almost Sorted;60;7
+Almost Sorted;70;8
+Almost Sorted;80;10
+Almost Sorted;90;12
+Almost Sorted;100;15
+Almost Sorted;110;17
+Almost Sorted;120;21
+Almost Sorted;130;23
+Almost Sorted;140;27
+Almost Sorted;150;32
+Almost Sorted;160;34
+Almost Sorted;170;39
+Almost Sorted;180;44
+Almost Sorted;190;47
+Almost Sorted;200;53
+Almost Sorted;210;54
+Almost Sorted;220;55
+Almost Sorted;230;62
+Almost Sorted;240;70
+Almost Sorted;250;75
+Almost Sorted;260;85
+Almost Sorted;270;91
+Almost Sorted;280;96
+Almost Sorted;290;98
+Reversed sorted;50;7
+Reversed sorted;60;7
+Reversed sorted;70;9
+Reversed sorted;80;12
+Reversed sorted;90;261
+Reversed sorted;100;19
+Reversed sorted;110;19
+Reversed sorted;120;20
+Reversed sorted;130;24
+Reversed sorted;140;26
+Reversed sorted;150;30
+Reversed sorted;160;44
+Reversed sorted;170;42
+Reversed sorted;180;334
+Reversed sorted;190;118
+Reversed sorted;200;59
+Reversed sorted;210;59
+Reversed sorted;220;62
+Reversed sorted;230;59
+Reversed sorted;240;64
+Reversed sorted;250;70
+Reversed sorted;260;103
+Reversed sorted;270;87
+Reversed sorted;280;94
+Reversed sorted;290;103
+Mode;Size;Bubble Sort
+From 0 to 5;50;11
+From 0 to 5;60;13
+From 0 to 5;70;14
+From 0 to 5;80;22
+From 0 to 5;90;24
+From 0 to 5;100;31
+From 0 to 5;110;36
+From 0 to 5;120;40
+From 0 to 5;130;47
+From 0 to 5;140;51
+From 0 to 5;150;58
+From 0 to 5;160;63
+From 0 to 5;170;73
+From 0 to 5;180;101
+From 0 to 5;190;95
+From 0 to 5;200;102
+From 0 to 5;210;124
+From 0 to 5;220;138
+From 0 to 5;230;139
+From 0 to 5;240;180
+From 0 to 5;250;208
+From 0 to 5;260;189
+From 0 to 5;270;190
+From 0 to 5;280;221
+From 0 to 5;290;204
+From 1 to 4100;50;11
+From 1 to 4100;60;14
+From 1 to 4100;70;19
+From 1 to 4100;80;26
+From 1 to 4100;90;31
+From 1 to 4100;100;42
+From 1 to 4100;110;47
+From 1 to 4100;120;57
+From 1 to 4100;130;69
+From 1 to 4100;140;72
+From 1 to 4100;150;84
+From 1 to 4100;160;97
+From 1 to 4100;170;107
+From 1 to 4100;180;118
+From 1 to 4100;190;130
+From 1 to 4100;200;141
+From 1 to 4100;210;166
+From 1 to 4100;220;171
+From 1 to 4100;230;192
+From 1 to 4100;240;209
+From 1 to 4100;250;229
+From 1 to 4100;260;246
+From 1 to 4100;270;232
+From 1 to 4100;280;246
+From 1 to 4100;290;437
+Almost Sorted;50;10
+Almost Sorted;60;13
+Almost Sorted;70;17
+Almost Sorted;80;21
+Almost Sorted;90;28
+Almost Sorted;100;36
+Almost Sorted;110;39
+Almost Sorted;120;47
+Almost Sorted;130;54
+Almost Sorted;140;59
+Almost Sorted;150;67
+Almost Sorted;160;82
+Almost Sorted;170;103
+Almost Sorted;180;101
+Almost Sorted;190;116
+Almost Sorted;200;126
+Almost Sorted;210;144
+Almost Sorted;220;145
+Almost Sorted;230;157
+Almost Sorted;240;168
+Almost Sorted;250;183
+Almost Sorted;260;214
+Almost Sorted;270;253
+Almost Sorted;280;261
+Almost Sorted;290;244
+Reversed sorted;50;10
+Reversed sorted;60;14
+Reversed sorted;70;23
+Reversed sorted;80;21
+Reversed sorted;90;25
+Reversed sorted;100;34
+Reversed sorted;110;40
+Reversed sorted;120;46
+Reversed sorted;130;49
+Reversed sorted;140;74
+Reversed sorted;150;66
+Reversed sorted;160;82
+Reversed sorted;170;86
+Reversed sorted;180;94
+Reversed sorted;190;108
+Reversed sorted;200;121
+Reversed sorted;210;135
+Reversed sorted;220;146
+Reversed sorted;230;153
+Reversed sorted;240;169
+Reversed sorted;250;189
+Reversed sorted;260;201
+Reversed sorted;270;216
+Reversed sorted;280;226
+Reversed sorted;290;250
+Mode;Size;Bubble Iverson 1
+From 0 to 5;50;11
+From 0 to 5;60;13
+From 0 to 5;70;17
+From 0 to 5;80;19
+From 0 to 5;90;23
+From 0 to 5;100;30
+From 0 to 5;110;34
+From 0 to 5;120;40
+From 0 to 5;130;45
+From 0 to 5;140;49
+From 0 to 5;150;57
+From 0 to 5;160;62
+From 0 to 5;170;71
+From 0 to 5;180;84
+From 0 to 5;190;89
+From 0 to 5;200;96
+From 0 to 5;210;117
+From 0 to 5;220;126
+From 0 to 5;230;132
+From 0 to 5;240;146
+From 0 to 5;250;159
+From 0 to 5;260;164
+From 0 to 5;270;239
+From 0 to 5;280;226
+From 0 to 5;290;199
+From 1 to 4100;50;9
+From 1 to 4100;60;12
+From 1 to 4100;70;16
+From 1 to 4100;80;23
+From 1 to 4100;90;26
+From 1 to 4100;100;34
+From 1 to 4100;110;39
+From 1 to 4100;120;45
+From 1 to 4100;130;57
+From 1 to 4100;140;59
+From 1 to 4100;150;72
+From 1 to 4100;160;79
+From 1 to 4100;170;88
+From 1 to 4100;180;98
+From 1 to 4100;190;106
+From 1 to 4100;200;117
+From 1 to 4100;210;135
+From 1 to 4100;220;141
+From 1 to 4100;230;159
+From 1 to 4100;240;167
+From 1 to 4100;250;187
+From 1 to 4100;260;212
+From 1 to 4100;270;215
+From 1 to 4100;280;364
+From 1 to 4100;290;290
+Almost Sorted;50;11
+Almost Sorted;60;13
+Almost Sorted;70;17
+Almost Sorted;80;21
+Almost Sorted;90;24
+Almost Sorted;100;30
+Almost Sorted;110;39
+Almost Sorted;120;46
+Almost Sorted;130;53
+Almost Sorted;140;59
+Almost Sorted;150;67
+Almost Sorted;160;82
+Almost Sorted;170;88
+Almost Sorted;180;99
+Almost Sorted;190;113
+Almost Sorted;200;122
+Almost Sorted;210;134
+Almost Sorted;220;138
+Almost Sorted;230;155
+Almost Sorted;240;167
+Almost Sorted;250;181
+Almost Sorted;260;196
+Almost Sorted;270;214
+Almost Sorted;280;234
+Almost Sorted;290;241
+Reversed sorted;50;10
+Reversed sorted;60;13
+Reversed sorted;70;18
+Reversed sorted;80;21
+Reversed sorted;90;26
+Reversed sorted;100;34
+Reversed sorted;110;40
+Reversed sorted;120;46
+Reversed sorted;130;53
+Reversed sorted;140;61
+Reversed sorted;150;65
+Reversed sorted;160;81
+Reversed sorted;170;86
+Reversed sorted;180;92
+Reversed sorted;190;115
+Reversed sorted;200;119
+Reversed sorted;210;134
+Reversed sorted;220;145
+Reversed sorted;230;156
+Reversed sorted;240;166
+Reversed sorted;250;185
+Reversed sorted;260;198
+Reversed sorted;270;215
+Reversed sorted;280;222
+Reversed sorted;290;244
+Mode;Size;Bubble Iverson 2
+From 0 to 5;50;11
+From 0 to 5;60;11
+From 0 to 5;70;14
+From 0 to 5;80;20
+From 0 to 5;90;27
+From 0 to 5;100;30
+From 0 to 5;110;34
+From 0 to 5;120;40
+From 0 to 5;130;45
+From 0 to 5;140;57
+From 0 to 5;150;61
+From 0 to 5;160;189
+From 0 to 5;170;108
+From 0 to 5;180;106
+From 0 to 5;190;175
+From 0 to 5;200;138
+From 0 to 5;210;144
+From 0 to 5;220;169
+From 0 to 5;230;170
+From 0 to 5;240;191
+From 0 to 5;250;216
+From 0 to 5;260;231
+From 0 to 5;270;238
+From 0 to 5;280;244
+From 0 to 5;290;248
+From 1 to 4100;50;10
+From 1 to 4100;60;17
+From 1 to 4100;70;21
+From 1 to 4100;80;27
+From 1 to 4100;90;30
+From 1 to 4100;100;46
+From 1 to 4100;110;51
+From 1 to 4100;120;59
+From 1 to 4100;130;69
+From 1 to 4100;140;72
+From 1 to 4100;150;89
+From 1 to 4100;160;148
+From 1 to 4100;170;135
+From 1 to 4100;180;1073
+From 1 to 4100;190;166
+From 1 to 4100;200;145
+From 1 to 4100;210;170
+From 1 to 4100;220;178
+From 1 to 4100;230;277
+From 1 to 4100;240;269
+From 1 to 4100;250;255
+From 1 to 4100;260;258
+From 1 to 4100;270;267
+From 1 to 4100;280;314
+From 1 to 4100;290;513
+Almost Sorted;50;15
+Almost Sorted;60;20
+Almost Sorted;70;23
+Almost Sorted;80;119
+Almost Sorted;90;30
+Almost Sorted;100;37
+Almost Sorted;110;54
+Almost Sorted;120;63
+Almost Sorted;130;85
+Almost Sorted;140;92
+Almost Sorted;150;113
+Almost Sorted;160;100
+Almost Sorted;170;117
+Almost Sorted;180;137
+Almost Sorted;190;151
+Almost Sorted;200;143
+Almost Sorted;210;177
+Almost Sorted;220;208
+Almost Sorted;230;228
+Almost Sorted;240;232
+Almost Sorted;250;298
+Almost Sorted;260;208
+Almost Sorted;270;303
+Almost Sorted;280;309
+Almost Sorted;290;347
+Reversed sorted;50;15
+Reversed sorted;60;30
+Reversed sorted;70;22
+Reversed sorted;80;27
+Reversed sorted;90;32
+Reversed sorted;100;43
+Reversed sorted;110;50
+Reversed sorted;120;57
+Reversed sorted;130;62
+Reversed sorted;140;78
+Reversed sorted;150;85
+Reversed sorted;160;104
+Reversed sorted;170;110
+Reversed sorted;180;132
+Reversed sorted;190;156
+Reversed sorted;200;173
+Reversed sorted;210;172
+Reversed sorted;220;184
+Reversed sorted;230;186
+Reversed sorted;240;204
+Reversed sorted;250;235
+Reversed sorted;260;780
+Reversed sorted;270;364
+Reversed sorted;280;273
+Reversed sorted;290;760
+Mode;Size;Insertion Sort
+From 0 to 5;50;7
+From 0 to 5;60;7
+From 0 to 5;70;8
+From 0 to 5;80;12
+From 0 to 5;90;15
+From 0 to 5;100;20
+From 0 to 5;110;22
+From 0 to 5;120;25
+From 0 to 5;130;28
+From 0 to 5;140;30
+From 0 to 5;150;36
+From 0 to 5;160;38
+From 0 to 5;170;44
+From 0 to 5;180;54
+From 0 to 5;190;86
+From 0 to 5;200;63
+From 0 to 5;210;77
+From 0 to 5;220;84
+From 0 to 5;230;85
+From 0 to 5;240;121
+From 0 to 5;250;103
+From 0 to 5;260;103
+From 0 to 5;270;121
+From 0 to 5;280;125
+From 0 to 5;290;125
+From 1 to 4100;50;6
+From 1 to 4100;60;8
+From 1 to 4100;70;10
+From 1 to 4100;80;14
+From 1 to 4100;90;17
+From 1 to 4100;100;23
+From 1 to 4100;110;26
+From 1 to 4100;120;29
+From 1 to 4100;130;38
+From 1 to 4100;140;37
+From 1 to 4100;150;47
+From 1 to 4100;160;54
+From 1 to 4100;170;59
+From 1 to 4100;180;65
+From 1 to 4100;190;71
+From 1 to 4100;200;77
+From 1 to 4100;210;94
+From 1 to 4100;220;94
+From 1 to 4100;230;109
+From 1 to 4100;240;112
+From 1 to 4100;250;131
+From 1 to 4100;260;136
+From 1 to 4100;270;146
+From 1 to 4100;280;159
+From 1 to 4100;290;179
+Almost Sorted;50;8
+Almost Sorted;60;9
+Almost Sorted;70;11
+Almost Sorted;80;14
+Almost Sorted;90;14
+Almost Sorted;100;19
+Almost Sorted;110;26
+Almost Sorted;120;30
+Almost Sorted;130;35
+Almost Sorted;140;36
+Almost Sorted;150;44
+Almost Sorted;160;56
+Almost Sorted;170;59
+Almost Sorted;180;69
+Almost Sorted;190;78
+Almost Sorted;200;84
+Almost Sorted;210;95
+Almost Sorted;220;93
+Almost Sorted;230;105
+Almost Sorted;240;127
+Almost Sorted;250;120
+Almost Sorted;260;135
+Almost Sorted;270;148
+Almost Sorted;280;159
+Almost Sorted;290;168
+Reversed sorted;50;14
+Reversed sorted;60;10
+Reversed sorted;70;15
+Reversed sorted;80;14
+Reversed sorted;90;15
+Reversed sorted;100;22
+Reversed sorted;110;26
+Reversed sorted;120;28
+Reversed sorted;130;30
+Reversed sorted;140;40
+Reversed sorted;150;42
+Reversed sorted;160;53
+Reversed sorted;170;138
+Reversed sorted;180;61
+Reversed sorted;190;74
+Reversed sorted;200;79
+Reversed sorted;210;95
+Reversed sorted;220;101
+Reversed sorted;230;100
+Reversed sorted;240;125
+Reversed sorted;250;169
+Reversed sorted;260;160
+Reversed sorted;270;141
+Reversed sorted;280;151
+Reversed sorted;290;162
+Mode;Size;Binary Insertion Sort
+From 0 to 5;50;7
+From 0 to 5;60;6
+From 0 to 5;70;7
+From 0 to 5;80;8
+From 0 to 5;90;9
+From 0 to 5;100;12
+From 0 to 5;110;13
+From 0 to 5;120;15
+From 0 to 5;130;15
+From 0 to 5;140;284
+From 0 to 5;150;20
+From 0 to 5;160;20
+From 0 to 5;170;23
+From 0 to 5;180;27
+From 0 to 5;190;23
+From 0 to 5;200;21
+From 0 to 5;210;31
+From 0 to 5;220;34
+From 0 to 5;230;37
+From 0 to 5;240;39
+From 0 to 5;250;43
+From 0 to 5;260;44
+From 0 to 5;270;49
+From 0 to 5;280;49
+From 0 to 5;290;64
+From 1 to 4100;50;6
+From 1 to 4100;60;6
+From 1 to 4100;70;7
+From 1 to 4100;80;9
+From 1 to 4100;90;11
+From 1 to 4100;100;13
+From 1 to 4100;110;15
+From 1 to 4100;120;16
+From 1 to 4100;130;22
+From 1 to 4100;140;24
+From 1 to 4100;150;23
+From 1 to 4100;160;40
+From 1 to 4100;170;29
+From 1 to 4100;180;31
+From 1 to 4100;190;34
+From 1 to 4100;200;39
+From 1 to 4100;210;51
+From 1 to 4100;220;38
+From 1 to 4100;230;47
+From 1 to 4100;240;49
+From 1 to 4100;250;57
+From 1 to 4100;260;58
+From 1 to 4100;270;61
+From 1 to 4100;280;62
+From 1 to 4100;290;77
+Almost Sorted;50;6
+Almost Sorted;60;7
+Almost Sorted;70;8
+Almost Sorted;80;9
+Almost Sorted;90;10
+Almost Sorted;100;12
+Almost Sorted;110;15
+Almost Sorted;120;16
+Almost Sorted;130;18
+Almost Sorted;140;19
+Almost Sorted;150;22
+Almost Sorted;160;27
+Almost Sorted;170;27
+Almost Sorted;180;32
+Almost Sorted;190;35
+Almost Sorted;200;37
+Almost Sorted;210;41
+Almost Sorted;220;42
+Almost Sorted;230;46
+Almost Sorted;240;49
+Almost Sorted;250;52
+Almost Sorted;260;56
+Almost Sorted;270;59
+Almost Sorted;280;64
+Almost Sorted;290;64
+Reversed sorted;50;6
+Reversed sorted;60;6
+Reversed sorted;70;8
+Reversed sorted;80;9
+Reversed sorted;90;9
+Reversed sorted;100;11
+Reversed sorted;110;12
+Reversed sorted;120;13
+Reversed sorted;130;14
+Reversed sorted;140;17
+Reversed sorted;150;18
+Reversed sorted;160;21
+Reversed sorted;170;21
+Reversed sorted;180;23
+Reversed sorted;190;27
+Reversed sorted;200;28
+Reversed sorted;210;30
+Reversed sorted;220;33
+Reversed sorted;230;34
+Reversed sorted;240;37
+Reversed sorted;250;40
+Reversed sorted;260;42
+Reversed sorted;270;44
+Reversed sorted;280;47
+Reversed sorted;290;62
+Mode;Size;Counting Sort
+From 0 to 5;50;6
+From 0 to 5;60;2
+From 0 to 5;70;2
+From 0 to 5;80;1
+From 0 to 5;90;1
+From 0 to 5;100;1
+From 0 to 5;110;1
+From 0 to 5;120;2
+From 0 to 5;130;1
+From 0 to 5;140;2
+From 0 to 5;150;1
+From 0 to 5;160;2
+From 0 to 5;170;2
+From 0 to 5;180;5
+From 0 to 5;190;2
+From 0 to 5;200;2
+From 0 to 5;210;2
+From 0 to 5;220;2
+From 0 to 5;230;2
+From 0 to 5;240;2
+From 0 to 5;250;3
+From 0 to 5;260;3
+From 0 to 5;270;3
+From 0 to 5;280;2
+From 0 to 5;290;3
+From 1 to 4100;50;22
+From 1 to 4100;60;21
+From 1 to 4100;70;21
+From 1 to 4100;80;24
+From 1 to 4100;90;22
+From 1 to 4100;100;22
+From 1 to 4100;110;22
+From 1 to 4100;120;26
+From 1 to 4100;130;22
+From 1 to 4100;140;27
+From 1 to 4100;150;22
+From 1 to 4100;160;23
+From 1 to 4100;170;25
+From 1 to 4100;180;23
+From 1 to 4100;190;23
+From 1 to 4100;200;29
+From 1 to 4100;210;24
+From 1 to 4100;220;24
+From 1 to 4100;230;24
+From 1 to 4100;240;24
+From 1 to 4100;250;25
+From 1 to 4100;260;25
+From 1 to 4100;270;23
+From 1 to 4100;280;23
+From 1 to 4100;290;24
+Almost Sorted;50;50
+Almost Sorted;60;22
+Almost Sorted;70;22
+Almost Sorted;80;39
+Almost Sorted;90;23
+Almost Sorted;100;22
+Almost Sorted;110;40
+Almost Sorted;120;40
+Almost Sorted;130;22
+Almost Sorted;140;42
+Almost Sorted;150;20
+Almost Sorted;160;43
+Almost Sorted;170;23
+Almost Sorted;180;43
+Almost Sorted;190;39
+Almost Sorted;200;25
+Almost Sorted;210;25
+Almost Sorted;220;23
+Almost Sorted;230;25
+Almost Sorted;240;21
+Almost Sorted;250;23
+Almost Sorted;260;28
+Almost Sorted;270;22
+Almost Sorted;280;23
+Almost Sorted;290;24
+Reversed sorted;50;19
+Reversed sorted;60;27
+Reversed sorted;70;25
+Reversed sorted;80;37
+Reversed sorted;90;57
+Reversed sorted;100;23
+Reversed sorted;110;22
+Reversed sorted;120;25
+Reversed sorted;130;24
+Reversed sorted;140;22
+Reversed sorted;150;43
+Reversed sorted;160;25
+Reversed sorted;170;31
+Reversed sorted;180;30
+Reversed sorted;190;72
+Reversed sorted;200;25
+Reversed sorted;210;27
+Reversed sorted;220;28
+Reversed sorted;230;29
+Reversed sorted;240;26
+Reversed sorted;250;28
+Reversed sorted;260;62
+Reversed sorted;270;28
+Reversed sorted;280;29
+Reversed sorted;290;26
+Mode;Size;Radix Sort
+From 0 to 5;50;6
+From 0 to 5;60;4
+From 0 to 5;70;13
+From 0 to 5;80;5
+From 0 to 5;90;5
+From 0 to 5;100;8
+From 0 to 5;110;7
+From 0 to 5;120;8
+From 0 to 5;130;15
+From 0 to 5;140;9
+From 0 to 5;150;9
+From 0 to 5;160;9
+From 0 to 5;170;12
+From 0 to 5;180;18
+From 0 to 5;190;13
+From 0 to 5;200;13
+From 0 to 5;210;17
+From 0 to 5;220;23
+From 0 to 5;230;11
+From 0 to 5;240;12
+From 0 to 5;250;19
+From 0 to 5;260;13
+From 0 to 5;270;12
+From 0 to 5;280;9
+From 0 to 5;290;9
+From 1 to 4100;50;8
+From 1 to 4100;60;7
+From 1 to 4100;70;7
+From 1 to 4100;80;16
+From 1 to 4100;90;13
+From 1 to 4100;100;9
+From 1 to 4100;110;10
+From 1 to 4100;120;14
+From 1 to 4100;130;14
+From 1 to 4100;140;15
+From 1 to 4100;150;19
+From 1 to 4100;160;12
+From 1 to 4100;170;16
+From 1 to 4100;180;14
+From 1 to 4100;190;12
+From 1 to 4100;200;12
+From 1 to 4100;210;15
+From 1 to 4100;220;13
+From 1 to 4100;230;15
+From 1 to 4100;240;14
+From 1 to 4100;250;16
+From 1 to 4100;260;15
+From 1 to 4100;270;15
+From 1 to 4100;280;17
+From 1 to 4100;290;16
+Almost Sorted;50;7
+Almost Sorted;60;7
+Almost Sorted;70;7
+Almost Sorted;80;7
+Almost Sorted;90;8
+Almost Sorted;100;11
+Almost Sorted;110;9
+Almost Sorted;120;9
+Almost Sorted;130;10
+Almost Sorted;140;10
+Almost Sorted;150;13
+Almost Sorted;160;11
+Almost Sorted;170;11
+Almost Sorted;180;11
+Almost Sorted;190;12
+Almost Sorted;200;14
+Almost Sorted;210;13
+Almost Sorted;220;13
+Almost Sorted;230;16
+Almost Sorted;240;14
+Almost Sorted;250;14
+Almost Sorted;260;15
+Almost Sorted;270;17
+Almost Sorted;280;16
+Almost Sorted;290;16
+Reversed sorted;50;7
+Reversed sorted;60;7
+Reversed sorted;70;7
+Reversed sorted;80;8
+Reversed sorted;90;8
+Reversed sorted;100;9
+Reversed sorted;110;9
+Reversed sorted;120;9
+Reversed sorted;130;10
+Reversed sorted;140;10
+Reversed sorted;150;11
+Reversed sorted;160;11
+Reversed sorted;170;11
+Reversed sorted;180;12
+Reversed sorted;190;12
+Reversed sorted;200;12
+Reversed sorted;210;13
+Reversed sorted;220;13
+Reversed sorted;230;14
+Reversed sorted;240;14
+Reversed sorted;250;15
+Reversed sorted;260;14
+Reversed sorted;270;15
+Reversed sorted;280;16
+Reversed sorted;290;16
+Mode;Size;Merge Sort
+From 0 to 5;50;19
+From 0 to 5;60;21
+From 0 to 5;70;24
+From 0 to 5;80;29
+From 0 to 5;90;32
+From 0 to 5;100;36
+From 0 to 5;110;87
+From 0 to 5;120;45
+From 0 to 5;130;51
+From 0 to 5;140;46
+From 0 to 5;150;49
+From 0 to 5;160;51
+From 0 to 5;170;55
+From 0 to 5;180;50
+From 0 to 5;190;41
+From 0 to 5;200;43
+From 0 to 5;210;45
+From 0 to 5;220;47
+From 0 to 5;230;47
+From 0 to 5;240;48
+From 0 to 5;250;55
+From 0 to 5;260;53
+From 0 to 5;270;56
+From 0 to 5;280;60
+From 0 to 5;290;61
+From 1 to 4100;50;12
+From 1 to 4100;60;12
+From 1 to 4100;70;15
+From 1 to 4100;80;18
+From 1 to 4100;90;20
+From 1 to 4100;100;21
+From 1 to 4100;110;22
+From 1 to 4100;120;24
+From 1 to 4100;130;27
+From 1 to 4100;140;31
+From 1 to 4100;150;32
+From 1 to 4100;160;34
+From 1 to 4100;170;36
+From 1 to 4100;180;40
+From 1 to 4100;190;41
+From 1 to 4100;200;43
+From 1 to 4100;210;45
+From 1 to 4100;220;48
+From 1 to 4100;230;49
+From 1 to 4100;240;50
+From 1 to 4100;250;51
+From 1 to 4100;260;65
+From 1 to 4100;270;59
+From 1 to 4100;280;62
+From 1 to 4100;290;64
+Almost Sorted;50;11
+Almost Sorted;60;12
+Almost Sorted;70;15
+Almost Sorted;80;19
+Almost Sorted;90;20
+Almost Sorted;100;22
+Almost Sorted;110;23
+Almost Sorted;120;25
+Almost Sorted;130;28
+Almost Sorted;140;31
+Almost Sorted;150;32
+Almost Sorted;160;35
+Almost Sorted;170;36
+Almost Sorted;180;39
+Almost Sorted;190;39
+Almost Sorted;200;43
+Almost Sorted;210;45
+Almost Sorted;220;47
+Almost Sorted;230;134
+Almost Sorted;240;75
+Almost Sorted;250;53
+Almost Sorted;260;74
+Almost Sorted;270;61
+Almost Sorted;280;70
+Almost Sorted;290;64
+Reversed sorted;50;13
+Reversed sorted;60;12
+Reversed sorted;70;16
+Reversed sorted;80;17
+Reversed sorted;90;20
+Reversed sorted;100;21
+Reversed sorted;110;23
+Reversed sorted;120;24
+Reversed sorted;130;28
+Reversed sorted;140;32
+Reversed sorted;150;33
+Reversed sorted;160;34
+Reversed sorted;170;36
+Reversed sorted;180;39
+Reversed sorted;190;39
+Reversed sorted;200;43
+Reversed sorted;210;45
+Reversed sorted;220;47
+Reversed sorted;230;49
+Reversed sorted;240;50
+Reversed sorted;250;51
+Reversed sorted;260;55
+Reversed sorted;270;59
+Reversed sorted;280;86
+Reversed sorted;290;64
+Mode;Size;QuickSort Hoare partition
+From 0 to 5;50;8
+From 0 to 5;60;4
+From 0 to 5;70;5
+From 0 to 5;80;5
+From 0 to 5;90;5
+From 0 to 5;100;6
+From 0 to 5;110;7
+From 0 to 5;120;8
+From 0 to 5;130;8
+From 0 to 5;140;8
+From 0 to 5;150;12
+From 0 to 5;160;9
+From 0 to 5;170;10
+From 0 to 5;180;14
+From 0 to 5;190;12
+From 0 to 5;200;12
+From 0 to 5;210;15
+From 0 to 5;220;13
+From 0 to 5;230;14
+From 0 to 5;240;15
+From 0 to 5;250;15
+From 0 to 5;260;16
+From 0 to 5;270;16
+From 0 to 5;280;17
+From 0 to 5;290;45
+From 1 to 4100;50;5
+From 1 to 4100;60;6
+From 1 to 4100;70;6
+From 1 to 4100;80;6
+From 1 to 4100;90;7
+From 1 to 4100;100;8
+From 1 to 4100;110;9
+From 1 to 4100;120;10
+From 1 to 4100;130;11
+From 1 to 4100;140;12
+From 1 to 4100;150;12
+From 1 to 4100;160;13
+From 1 to 4100;170;14
+From 1 to 4100;180;16
+From 1 to 4100;190;16
+From 1 to 4100;200;17
+From 1 to 4100;210;19
+From 1 to 4100;220;19
+From 1 to 4100;230;20
+From 1 to 4100;240;23
+From 1 to 4100;250;22
+From 1 to 4100;260;22
+From 1 to 4100;270;24
+From 1 to 4100;280;25
+From 1 to 4100;290;25
+Almost Sorted;50;5
+Almost Sorted;60;5
+Almost Sorted;70;6
+Almost Sorted;80;7
+Almost Sorted;90;7
+Almost Sorted;100;8
+Almost Sorted;110;10
+Almost Sorted;120;10
+Almost Sorted;130;11
+Almost Sorted;140;12
+Almost Sorted;150;12
+Almost Sorted;160;13
+Almost Sorted;170;15
+Almost Sorted;180;16
+Almost Sorted;190;16
+Almost Sorted;200;17
+Almost Sorted;210;18
+Almost Sorted;220;26
+Almost Sorted;230;24
+Almost Sorted;240;26
+Almost Sorted;250;27
+Almost Sorted;260;27
+Almost Sorted;270;24
+Almost Sorted;280;24
+Almost Sorted;290;27
+Reversed sorted;50;4
+Reversed sorted;60;5
+Reversed sorted;70;5
+Reversed sorted;80;7
+Reversed sorted;90;8
+Reversed sorted;100;9
+Reversed sorted;110;10
+Reversed sorted;120;10
+Reversed sorted;130;11
+Reversed sorted;140;12
+Reversed sorted;150;13
+Reversed sorted;160;14
+Reversed sorted;170;17
+Reversed sorted;180;19
+Reversed sorted;190;17
+Reversed sorted;200;18
+Reversed sorted;210;19
+Reversed sorted;220;20
+Reversed sorted;230;21
+Reversed sorted;240;22
+Reversed sorted;250;23
+Reversed sorted;260;24
+Reversed sorted;270;24
+Reversed sorted;280;25
+Reversed sorted;290;27
+Mode;Size;QuickSort Lomuto partition
+From 0 to 5;50;7
+From 0 to 5;60;7
+From 0 to 5;70;9
+From 0 to 5;80;9
+From 0 to 5;90;10
+From 0 to 5;100;13
+From 0 to 5;110;18
+From 0 to 5;120;17
+From 0 to 5;130;22
+From 0 to 5;140;26
+From 0 to 5;150;25
+From 0 to 5;160;34
+From 0 to 5;170;43
+From 0 to 5;180;33
+From 0 to 5;190;38
+From 0 to 5;200;41
+From 0 to 5;210;56
+From 0 to 5;220;51
+From 0 to 5;230;55
+From 0 to 5;240;58
+From 0 to 5;250;61
+From 0 to 5;260;66
+From 0 to 5;270;70
+From 0 to 5;280;77
+From 0 to 5;290;82
+From 1 to 4100;50;7
+From 1 to 4100;60;5
+From 1 to 4100;70;6
+From 1 to 4100;80;7
+From 1 to 4100;90;7
+From 1 to 4100;100;9
+From 1 to 4100;110;9
+From 1 to 4100;120;11
+From 1 to 4100;130;14
+From 1 to 4100;140;13
+From 1 to 4100;150;15
+From 1 to 4100;160;16
+From 1 to 4100;170;16
+From 1 to 4100;180;16
+From 1 to 4100;190;18
+From 1 to 4100;200;20
+From 1 to 4100;210;20
+From 1 to 4100;220;21
+From 1 to 4100;230;25
+From 1 to 4100;240;25
+From 1 to 4100;250;26
+From 1 to 4100;260;26
+From 1 to 4100;270;29
+From 1 to 4100;280;28
+From 1 to 4100;290;29
+Almost Sorted;50;11
+Almost Sorted;60;6
+Almost Sorted;70;5
+Almost Sorted;80;5
+Almost Sorted;90;7
+Almost Sorted;100;8
+Almost Sorted;110;8
+Almost Sorted;120;9
+Almost Sorted;130;10
+Almost Sorted;140;11
+Almost Sorted;150;12
+Almost Sorted;160;13
+Almost Sorted;170;13
+Almost Sorted;180;14
+Almost Sorted;190;16
+Almost Sorted;200;16
+Almost Sorted;210;18
+Almost Sorted;220;19
+Almost Sorted;230;18
+Almost Sorted;240;19
+Almost Sorted;250;22
+Almost Sorted;260;21
+Almost Sorted;270;22
+Almost Sorted;280;24
+Almost Sorted;290;25
+Reversed sorted;50;4
+Reversed sorted;60;4
+Reversed sorted;70;5
+Reversed sorted;80;6
+Reversed sorted;90;6
+Reversed sorted;100;7
+Reversed sorted;110;8
+Reversed sorted;120;9
+Reversed sorted;130;10
+Reversed sorted;140;11
+Reversed sorted;150;12
+Reversed sorted;160;13
+Reversed sorted;170;13
+Reversed sorted;180;15
+Reversed sorted;190;15
+Reversed sorted;200;17
+Reversed sorted;210;19
+Reversed sorted;220;19
+Reversed sorted;230;19
+Reversed sorted;240;21
+Reversed sorted;250;22
+Reversed sorted;260;22
+Reversed sorted;270;84
+Reversed sorted;280;26
+Reversed sorted;290;27
+Mode;Size;HeapSort
+From 0 to 5;50;8
+From 0 to 5;60;7
+From 0 to 5;70;8
+From 0 to 5;80;9
+From 0 to 5;90;11
+From 0 to 5;100;12
+From 0 to 5;110;12
+From 0 to 5;120;14
+From 0 to 5;130;16
+From 0 to 5;140;18
+From 0 to 5;150;19
+From 0 to 5;160;19
+From 0 to 5;170;23
+From 0 to 5;180;23
+From 0 to 5;190;24
+From 0 to 5;200;25
+From 0 to 5;210;27
+From 0 to 5;220;30
+From 0 to 5;230;47
+From 0 to 5;240;36
+From 0 to 5;250;41
+From 0 to 5;260;44
+From 0 to 5;270;38
+From 0 to 5;280;40
+From 0 to 5;290;39
+From 1 to 4100;50;6
+From 1 to 4100;60;6
+From 1 to 4100;70;7
+From 1 to 4100;80;9
+From 1 to 4100;90;11
+From 1 to 4100;100;12
+From 1 to 4100;110;14
+From 1 to 4100;120;15
+From 1 to 4100;130;16
+From 1 to 4100;140;17
+From 1 to 4100;150;19
+From 1 to 4100;160;20
+From 1 to 4100;170;22
+From 1 to 4100;180;24
+From 1 to 4100;190;25
+From 1 to 4100;200;27
+From 1 to 4100;210;28
+From 1 to 4100;220;34
+From 1 to 4100;230;33
+From 1 to 4100;240;34
+From 1 to 4100;250;35
+From 1 to 4100;260;37
+From 1 to 4100;270;38
+From 1 to 4100;280;42
+From 1 to 4100;290;42
+Almost Sorted;50;7
+Almost Sorted;60;8
+Almost Sorted;70;10
+Almost Sorted;80;11
+Almost Sorted;90;13
+Almost Sorted;100;14
+Almost Sorted;110;15
+Almost Sorted;120;17
+Almost Sorted;130;19
+Almost Sorted;140;21
+Almost Sorted;150;23
+Almost Sorted;160;24
+Almost Sorted;170;26
+Almost Sorted;180;28
+Almost Sorted;190;30
+Almost Sorted;200;32
+Almost Sorted;210;33
+Almost Sorted;220;35
+Almost Sorted;230;37
+Almost Sorted;240;39
+Almost Sorted;250;41
+Almost Sorted;260;43
+Almost Sorted;270;45
+Almost Sorted;280;46
+Almost Sorted;290;48
+Reversed sorted;50;6
+Reversed sorted;60;6
+Reversed sorted;70;8
+Reversed sorted;80;9
+Reversed sorted;90;11
+Reversed sorted;100;12
+Reversed sorted;110;13
+Reversed sorted;120;15
+Reversed sorted;130;16
+Reversed sorted;140;17
+Reversed sorted;150;20
+Reversed sorted;160;20
+Reversed sorted;170;22
+Reversed sorted;180;27
+Reversed sorted;190;27
+Reversed sorted;200;54
+Reversed sorted;210;34
+Reversed sorted;220;35
+Reversed sorted;230;38
+Reversed sorted;240;41
+Reversed sorted;250;44
+Reversed sorted;260;45
+Reversed sorted;270;47
+Reversed sorted;280;49
+Reversed sorted;290;51
