@@ -14,6 +14,7 @@
 #include <string>
 #include <fstream>
 #include <chrono>
+#include <iomanip>
 #include "./InsertionSort.cpp"
 #include "./CountingSort.cpp"
 #include "./SelectionSort.cpp"
@@ -27,14 +28,20 @@ using std::cout;
 using std::string;
 using std::swap;
 using std::vector;
+using std::pair;
 using std::ios_base;
 using std::ios;
 using std::ifstream;
 using std::ofstream;
+using std::fstream;
+using std::make_pair;
 using std::exception;
 using std::chrono::duration_cast;
 using std::chrono::duration;
 using std::chrono::high_resolution_clock;
+using std::chrono::milliseconds;
+using std::chrono::microseconds;
+using std::chrono::seconds;
 
 int parseInteger();
 
@@ -50,44 +57,27 @@ void swapRandomElements(int *arr, int length);
 
 void chooseArray(int *arr, int index, int length);
 
-std::pair<string, double> sortAndCountTime(int choice_sort, int start_first, int *first_arr);
+pair<string, float> sortAndCountTime(int choice_sort, int start_first, int *first_arr);
 
-void writeToFile(int choice_sort, vector<std::pair<std::pair<string, int>, std::pair<string, double>>> &first_loop,
-                 std::fstream *fout);
+void writeToFile(int choice_sort, vector<pair<pair<string, int>, pair<string, float>>> &first_loop,
+                 fstream *fout);
 
 void
-writeSortNames(int choice_sort, const vector<std::pair<std::pair<string, int>, std::pair<string, double>>> &first_loop,
-               std::fstream *fout);
+writeSortNames(int choice_sort, const vector<pair<pair<string, int>, pair<string, float>>> &first_loop,
+               fstream *fout);
 
-string choiceRandomArray(int choice) {
-    if (choice == 1) {
-        return "From 0 to 5";
-    } else if (choice == 2) {
-        return "From 1 to 4100";
-    } else if (choice == 3) {
-        return "Almost Sorted";
-    } else {
-        return "Reversed sorted";
-    }
-}
+string choiceRandomArray(int choice);
 
-int arraySortedOrNot(int arr[], int n) {
-    if (n == 1 || n == 0) {
-        return 1;
-    }
-    if (arr[n - 1] < arr[n - 2]) {
-        return 0;
-    }
-    return arraySortedOrNot(arr, n - 1);
-}
+int arraySortedOrNot(int arr[], int n);
 
 int main() {
     std::ios_base::sync_with_stdio(false);
     sortInformation();
     cout << "Type here: ";
     int choice_sort = parseInteger();
-    vector<std::pair<std::pair<string, int>, std::pair<string, double>>> first_loop;
-    vector<std::pair<std::pair<string, int>, std::pair<string, double>>> second_loop;
+    cout << "Please wait...";
+    vector<pair<pair<string, int>, pair<string, float>>> first_loop;
+    vector<pair<pair<string, int>, pair<string, float>>> second_loop;
     for (int i = 1; i <= 4; ++i) {
         int start_first = 50;
         int end_first = 300;
@@ -110,12 +100,13 @@ int main() {
                     }
                     fout << "\n" << "After" << "\n\n";
                     auto result = sortAndCountTime(j + 1, size, copied_arr);
-                    first_loop.push_back({std::make_pair(choiceRandomArray(i), size), result});
+                    first_loop.push_back({make_pair(choiceRandomArray(i), size), result});
                     for (int k = 0; k < size; ++k) {
                         fout << copied_arr[k] << " ";
                     }
                     fout << "\n" << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << "\n\n";
                     fout.close();
+                    free(copied_arr);
                 }
             } else {
                 std::fstream fout;
@@ -132,6 +123,8 @@ int main() {
                 }
                 fout << "\n" << "Is sorted: " << (arraySortedOrNot(first_arr, size) ? "Yes" : "No") << "\n\n";
             }
+            free(first_arr);
+            first_arr = nullptr;
         }
         int start_second = 100;
         int end_second = 4100;
@@ -152,13 +145,15 @@ int main() {
                     for (int k = 0; k < size; ++k) {
                         fout << copied_arr[k] << " ";
                     }
-                    fout << "\n" << "After" << "\n\n";
+                    fout << "\n" << "After" << std::endl << std::endl;
                     auto result = sortAndCountTime(j + 1, size, copied_arr);
                     second_loop.push_back({std::make_pair(choiceRandomArray(i), size), result});
                     for (int k = 0; k < size; ++k) {
                         fout << copied_arr[k] << " ";
                     }
-                    fout << "\n" << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << "\n\n";
+                    fout << "\n" << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << std::endl
+                         << std::endl;
+                    free(copied_arr);
                 }
             } else {
                 std::fstream fout;
@@ -167,90 +162,87 @@ int main() {
                 for (int k = 0; k < size; ++k) {
                     fout << second_arr[k] << " ";
                 }
-                fout << "\n" << "After" << "\n\n";
+                fout << "\n" << "After" << std::endl << std::endl;
                 auto result = sortAndCountTime(choice_sort, size, second_arr);
                 second_loop.push_back({std::make_pair(choiceRandomArray(i), size), result});
                 for (int k = 0; k < size; ++k) {
                     fout << second_arr[k] << " ";
                 }
-                fout << "\n" << "Is sorted: " << (arraySortedOrNot(second_arr, size) ? "Yes" : "No") << "\n\n";
+                fout << "\n" << "Is sorted: " << (arraySortedOrNot(second_arr, size) ? "Yes" : "No") << std::endl
+                     << std::endl;
             }
+            free(second_arr);
+            second_arr = nullptr;
         }
     }
     // file pointer
     std::fstream fout;
-    time_t rawtime;
-    struct tm *timeinfo;
+    time_t raw_time;
+    struct tm *time_info;
     char buffer[80];
 
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
+    time(&raw_time);
+    time_info = localtime(&raw_time);
 
-    strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
-    std::string str(buffer);
-    auto temp = str + ".csv";
+    // strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", time_info);
+    // std::string str(buffer);
+    // auto temp = str + ".csv";
     fout.open("First.csv", ios::out | ios::app);
     writeSortNames(choice_sort, first_loop, &fout);
     writeToFile(choice_sort, first_loop, &fout);
     fout.close();
     std::fstream fout_second;
-    temp = str + "-2.csv";
+    // temp = str + "-2.csv";
     fout_second.open("Second.csv", ios::out | ios::app);
     writeSortNames(choice_sort, second_loop, &fout_second);
     writeToFile(choice_sort, second_loop, &fout_second);
     fout_second.close();
+    cout << "Done! Files are located to the cmake-build-debug directory" << std::endl;
     return 0;
 }
 
 void
-writeSortNames(int choice_sort, const vector<std::pair<std::pair<string, int>, std::pair<string, double>>> &first_loop,
+writeSortNames(int choice_sort, const vector<pair<pair<string, int>, pair<string, float>>> &first_loop,
                std::fstream *fout) {
     if (choice_sort >= 13) {
         (*fout) << "Mode" << ';' << "size" << ';' << "Selection Sort" << ';' << "Bubble Sort" << ';'
                 << "Bubble Sort Iverson 1" << ';' <<
                 "Bubble Sort Iverson 2" << ';' << "Insertion Sort" << ';' << "Binary Insertion Sort" << ';' <<
                 "Counting Sort" << ';' << "Radix Sort" << ';' << "Merge Sort" << ';' << "QuickSort Hoare partition" <<
-                ';' << "QuickSort Lomuto partition" << ';' << "HeapSort" << '\n';
+                ';' << "QuickSort Lomuto partition" << ';' << "HeapSort" << std::endl;
     } else {
-        (*fout) << "Mode" << ';' << "Size" << ';' << first_loop[0].second.first << '\n';
+        (*fout) << "Mode" << ';' << "Size" << ';' << first_loop[0].second.first << std::endl;
     }
 }
 
-void writeToFile(int choice_sort, vector<std::pair<std::pair<string, int>, std::pair<string, double>>> &first_loop,
+void writeToFile(int choice_sort, vector<pair<pair<string, int>, pair<string, float>>> &first_loop,
                  std::fstream *fout) {
     bool is_size_has_written;
     for (auto &row: first_loop) {
         if (choice_sort >= 13) {
             if (!is_size_has_written) {
-                (*fout) << row.first.first << ';' << row.first.second << ';' << std::to_string(row.second.second)
-                        << ';';
+                (*fout) << row.first.first << ';' << row.first.second << ';' << row.second.second << ';';
                 is_size_has_written = true;
-            }
-            if (row.second.first == "HeapSort") {
-                (*fout) << std::to_string(row.second.second) << '\n';
-                is_size_has_written = false;
             } else {
-                (*fout) << row.second.second << ';';
+                if (row.second.first == "HeapSort") {
+                    (*fout) << std::to_string(row.second.second) << std::endl;
+                    is_size_has_written = false;
+                } else {
+                    (*fout) << row.second.second << ';';
+                }
             }
         } else {
-            (*fout) << row.first.first << ';' << row.first.second << ';' << std::to_string(row.second.second) << "\n";
+            (*fout) << row.first.first << ';' << row.first.second << ';' << row.second.second << std::endl;
         }
     }
 }
 
-std::pair<string, double> sortAndCountTime(int choice_sort, int start_first, int *first_arr) {
-    using std::chrono::high_resolution_clock;
-    using std::chrono::duration_cast;
-    using std::chrono::duration;
-    using std::chrono::milliseconds;
-    auto start = high_resolution_clock::now();
+std::pair<string, float> sortAndCountTime(int choice_sort, int start_first, int *first_arr) {
+    auto begin = std::chrono::steady_clock::now();
     string name_of_sort = takeTheSort(first_arr, choice_sort, start_first);
-    auto end = high_resolution_clock::now();
-    auto ms_int = duration_cast<milliseconds>(end - start);
-    duration<double, std::milli> ms_double = end - start;
-    std::cout << ms_int.count() << "ms\n";
-    std::cout << ms_double.count() << "ms\n";
-    return std::make_pair(name_of_sort, ms_double.count());
+    auto end = std::chrono::steady_clock::now();
+    auto elapsed_ms = std::chrono::duration_cast<std::chrono::microseconds>(end - begin);
+    return std::make_pair(name_of_sort, elapsed_ms.count());
 }
 
 string takeTheSort(int *array, int choice_sort, int length) {
@@ -314,25 +306,6 @@ int parseInteger() {
     return in;
 }
 
-void sortInformation() {
-    cout << "===== Available sort algorithms =====" << "\n";
-    cout << "[1] - Selection sort" << "\n";
-    cout << "[2] - Bubble sort" << "\n";
-    cout << "[3] - Bubble sort v 1" << "\n";
-    cout << "[4] - Bubble sort v 1 and 2" << "\n";
-    cout << "[5] - Insertion sort" << "\n";
-    cout << "[6] - Binary insertion sort" << "\n";
-    cout << "[7] - Counting sort" << "\n";
-    cout << "[8] - Radix sort" << "\n";
-    cout << "[9] - Merge sort" << "\n";
-    cout << "[10] - QuickSort (Hoare partition)" << "\n";
-    cout << "[11] - QuickSort (Lomuto partition)" << "\n";
-    cout << "[12] - HeapSort" << "\n";
-    cout << "[13] - Choose all sort algorithms" << "\n";
-    cout << "By default program choose - [13]" << "\n";
-    cout << "=================================" << "\n";
-}
-
 void generateArr(int *arr, int end, int length) {
     for (int i = 0; i < length; ++i) {
         arr[i] = rand() % end;
@@ -365,3 +338,45 @@ void chooseArray(int *arr, int index, int length) {
     }
 }
 
+string choiceRandomArray(int choice) {
+    string result;
+    if (choice == 1) {
+        result = "From 0 to 5";
+    } else if (choice == 2) {
+        result = "From 1 to 4100";
+    } else if (choice == 3) {
+        result = "Almost Sorted";
+    } else {
+        result = "Reversed sorted";
+    }
+    return result;
+}
+
+int arraySortedOrNot(int *arr, int n) {
+    if (n == 1 || n == 0) {
+        return 1;
+    }
+    if (arr[n - 1] < arr[n - 2]) {
+        return 0;
+    }
+    return arraySortedOrNot(arr, n - 1);
+}
+
+void sortInformation() {
+    cout << "===== Available sort algorithms =====" << "\n";
+    cout << "[1] - Selection sort" << "\n";
+    cout << "[2] - Bubble sort" << "\n";
+    cout << "[3] - Bubble sort v 1" << "\n";
+    cout << "[4] - Bubble sort v 1 and 2" << "\n";
+    cout << "[5] - Insertion sort" << "\n";
+    cout << "[6] - Binary insertion sort" << "\n";
+    cout << "[7] - Counting sort" << "\n";
+    cout << "[8] - Radix sort" << "\n";
+    cout << "[9] - Merge sort" << "\n";
+    cout << "[10] - QuickSort (Hoare partition)" << "\n";
+    cout << "[11] - QuickSort (Lomuto partition)" << "\n";
+    cout << "[12] - HeapSort" << "\n";
+    cout << "[13] - Choose all sort algorithms" << "\n";
+    cout << "By default program choose - [13]" << "\n";
+    cout << "=================================" << "\n";
+}
