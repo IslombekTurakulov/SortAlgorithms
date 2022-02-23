@@ -4,7 +4,7 @@
  *  ГРУППА: БПИ204
  *  Среда разработки: CLion, 2021.3.3 (213.6777.58)
  *  Сделано: графики, таблица, проверка , красивый вывод, возможность выбрать сортировки.
- *  Не сделано: Блок схема, не знаю зачем она нужна.
+ *  Не сделано: Отсутствует.
  * */
 
 #include <iostream>
@@ -75,12 +75,13 @@ int main() {
     int choice_sort = parseInteger();
     vector<pair<pair<string, int>, pair<string, int64_t>>> first_loop;
     vector<pair<pair<string, int>, pair<string, int64_t>>> second_loop;
+    int percentage = 0;
     for (int i = 1; i <= 4; ++i) {
         int start_first = 50;
         int end_first = 300;
         int shift_first = 10;
         int *first_arr = new int[start_first];
-        for (int size = start_first; size < end_first; size += shift_first) {
+        for (int size = start_first; size <= end_first; size += shift_first) {
             if (start_first != size) {
                 first_arr = new int[size];
             }
@@ -124,7 +125,7 @@ int main() {
         int end_second = 4100;
         int shift_second = 100;
         int *second_arr = new int[start_second];
-        for (int size = start_second; size < end_second; size += shift_second) {
+        for (int size = start_second; size <= end_second; size += shift_second) {
             if (start_second != size) {
                 second_arr = new int[size];
             }
@@ -165,6 +166,8 @@ int main() {
                      << std::endl;
             }
         }
+        percentage += 20;
+        cout << "Progress: " << percentage << "%" << "\n";
     }
     // file pointer
     std::fstream fout;
@@ -178,6 +181,8 @@ int main() {
     writeSortNames(choice_sort, second_loop, &fout_second);
     writeToFile(choice_sort, second_loop, &fout_second);
     fout_second.close();
+    percentage += 20;
+    cout << "Progress: " << percentage << "%" << std::endl;
     cout << "Done! Files are located to the cmake-build-debug directory" << std::endl;
     return 0;
 }
@@ -188,7 +193,7 @@ writeSortNames(int choice_sort, const vector<pair<pair<string, int>, pair<string
     if (choice_sort >= 13) {
         (*fout) << "Mode" << ';' << "size" << ';' << "Selection Sort" << ';' << "Bubble Sort" << ';'
                 << "Bubble Sort Iverson 1" << ';' <<
-                "Bubble Sort Iverson 2" << ';' << "Insertion Sort" << ';' << "Binary Insertion Sort" << ';' <<
+                "Bubble Sort Iverson 1 and 2" << ';' << "Insertion Sort" << ';' << "Binary Insertion Sort" << ';' <<
                 "Counting Sort" << ';' << "Radix Sort" << ';' << "Merge Sort" << ';' << "QuickSort Hoare partition" <<
                 ';' << "QuickSort Lomuto partition" << ';' << "HeapSort" << std::endl;
     } else {
@@ -281,7 +286,7 @@ int parseInteger() {
                 throw exception();
             }
         } catch (exception ex) {
-            cout << "Incorrect input!" << "\n";
+            cout << "Incorrect input!" << std::endl;
             cout << "Type here: ";
             continue;
         }
@@ -328,7 +333,7 @@ string choiceRandomArray(int choice) {
     if (choice == 1) {
         result = "From 0 to 5";
     } else if (choice == 2) {
-        result = "From 1 to 4100";
+        result = "From 0 to 4000";
     } else if (choice == 3) {
         result = "Almost Sorted";
     } else {
