@@ -31,11 +31,11 @@ void bubbleSortIversonFirst(int *arr, int length) {
 
 void bubbleSortIversonSecond(int *array, int length) {
     int prev = length - 1;
-    for (int i = 0; i < length - 1; i++) {
+    for (int i = 0; i < length - 1; ++i) {
         bool swapped;
         int bound = prev;
         prev = 0;
-        for (int j = 0; j < bound; j++) {
+        for (int j = 0; j < bound; ++j) {
             if (array[j] > array[j + 1]) {
                 std::swap(array[j], array[j + 1]);
                 swapped = true;

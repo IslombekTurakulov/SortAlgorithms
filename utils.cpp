@@ -59,6 +59,10 @@ void chooseArray(int *arr, int index, int length) {
         swapRandomElements(arr, length);
     } else {
         generateReversedArr(arr, 4100, length);
+        radixSort(arr, length);
+        for (int i = 0; i < length / 2; ++i) {
+            std::swap(arr[i], arr[length - i - 1]);
+        }
     }
 }
 

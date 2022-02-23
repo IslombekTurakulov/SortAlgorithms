@@ -9,7 +9,6 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <utility>
 #include <string>
 #include <fstream>
@@ -28,54 +27,63 @@
 
 using std::cin;
 using std::cout;
+using std::exception;
+using std::fstream;
+using std::ifstream;
+using std::ios;
+using std::ios_base;
+using std::make_pair;
+using std::ofstream;
+using std::pair;
 using std::string;
 using std::swap;
 using std::vector;
-using std::pair;
-using std::ios_base;
-using std::ios;
-using std::ifstream;
-using std::ofstream;
-using std::fstream;
-using std::make_pair;
-using std::exception;
-using std::chrono::duration_cast;
 using std::chrono::duration;
+using std::chrono::duration_cast;
 using std::chrono::high_resolution_clock;
-using std::chrono::milliseconds;
 using std::chrono::microseconds;
+using std::chrono::milliseconds;
 using std::chrono::seconds;
 
 void sortInformation();
 
 pair<string, int64_t> sortAndCountTime(int choice_sort, int start_first, int *first_arr);
 
-int calcAndWriteFirst(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop, int i,
+int calcAndWriteFirst(int choice_sort,
+                      vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop, int i,
                       int *first_arr, int size);
 
-int calcAndWriteSecond(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop, int i,
+int calcAndWriteSecond(int choice_sort,
+                       vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop, int i,
                        int *second_arr, int size);
 
-void writeCsvToFirstFile(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop);
+void writeCsvToFirstFile(int choice_sort,
+                         vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop);
 
-void writeCsvToSecondFile(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop);
+void writeCsvToSecondFile(int choice_sort,
+                          vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop);
 
 int main() {
     std::ios_base::sync_with_stdio(false);
+    // Отображение доступных сортировок
     sortInformation();
+    // Ввод цифры
     int choice_sort = parseInteger();
     vector<pair<pair<string, int>, pair<string, int64_t>>> first_loop;
     vector<pair<pair<string, int>, pair<string, int64_t>>> second_loop;
     int percentage = 0;
     for (int i = 1; i <= 4; ++i) {
+        // Идём по итерации первого массива от 50 до 100
         int start_first = 50;
         int end_first = 300;
         int shift_first = 10;
         int *first_arr = new int[start_first];
         for (int size = start_first; size <= end_first; size += shift_first) {
+            // Присваиваем новое size для first_arr
             if (start_first != size) {
                 first_arr = new int[size];
             }
+            //
             chooseArray(first_arr, i, size);
             size = calcAndWriteFirst(choice_sort, first_loop, i, first_arr, size);
         }
@@ -91,7 +99,8 @@ int main() {
             size = calcAndWriteSecond(choice_sort, second_loop, i, second_arr, size);
         }
         percentage += 20;
-        cout << "Progress: " << percentage << "%" << "\n";
+        cout << "Progress: " << percentage << "%"
+             << "\n";
     }
     writeCsvToFirstFile(choice_sort, first_loop);
     writeCsvToSecondFile(choice_sort, second_loop);
@@ -101,7 +110,8 @@ int main() {
     return 0;
 }
 
-void writeCsvToSecondFile(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop) {
+void writeCsvToSecondFile(int choice_sort,
+                          vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop) {
     fstream fout_second;
     fout_second.open("Second.csv", ios::out | ios::app);
     writeSortNames(choice_sort, second_loop, &fout_second);
@@ -109,7 +119,8 @@ void writeCsvToSecondFile(int choice_sort, vector<pair<pair<string, int>, pair<s
     fout_second.close();
 }
 
-void writeCsvToFirstFile(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop) {
+void writeCsvToFirstFile(int choice_sort,
+                         vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop) {
     std::fstream fout;
     fout.open("First.csv", ios::out | ios::app);
     writeSortNames(choice_sort, first_loop, &fout);
@@ -117,7 +128,8 @@ void writeCsvToFirstFile(int choice_sort, vector<pair<pair<string, int>, pair<st
     fout.close();
 }
 
-int calcAndWriteSecond(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop, int i,
+int calcAndWriteSecond(int choice_sort,
+                       vector<pair<pair<string, int>, pair<string, int64_t>>> &second_loop, int i,
                        int *second_arr, int size) {
     if (choice_sort >= 13) {
         for (int j = 0; j < 12; ++j) {
@@ -125,39 +137,49 @@ int calcAndWriteSecond(int choice_sort, vector<pair<pair<string, int>, pair<stri
             std::copy(second_arr, second_arr + size, copied_arr);
             fstream fout;
             fout.open("input - 2.txt", ios::out | ios::app);
-            fout << "Before" << "\n";
+            fout << "Before"
+                 << "\n";
             for (int k = 0; k < size; ++k) {
                 fout << copied_arr[k] << " ";
             }
-            fout << "\n" << "After" << std::endl << std::endl;
+            fout << "\n"
+                 << "After" << std::endl
+                 << std::endl;
             auto result = sortAndCountTime(j + 1, size, copied_arr);
             second_loop.push_back({std::make_pair(choiceRandomArray(i), size), result});
             for (int k = 0; k < size; ++k) {
                 fout << copied_arr[k] << " ";
             }
-            fout << "\n" << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << std::endl
+            fout << "\n"
+                 << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No")
+                 << std::endl
                  << std::endl;
         }
     } else {
         fstream fout;
         fout.open("input - 2.txt", ios::out | ios::app);
-        fout << "Before" << "\n";
+        fout << "Before"
+             << "\n";
         for (int k = 0; k < size; ++k) {
             fout << second_arr[k] << " ";
         }
-        fout << "\n" << "After" << std::endl << std::endl;
+        fout << "\n"
+             << "After" << std::endl
+             << std::endl;
         auto result = sortAndCountTime(choice_sort, size, second_arr);
         second_loop.push_back({std::make_pair(choiceRandomArray(i), size), result});
         for (int k = 0; k < size; ++k) {
             fout << second_arr[k] << " ";
         }
-        fout << "\n" << "Is sorted: " << (arraySortedOrNot(second_arr, size) ? "Yes" : "No") << std::endl
+        fout << "\n"
+             << "Is sorted: " << (arraySortedOrNot(second_arr, size) ? "Yes" : "No") << std::endl
              << std::endl;
     }
     return size;
 }
 
-int calcAndWriteFirst(int choice_sort, vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop, int i,
+int calcAndWriteFirst(int choice_sort,
+                      vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop, int i,
                       int *first_arr, int size) {
     if (choice_sort >= 13) {
         for (int j = 0; j < 12; ++j) {
@@ -165,37 +187,44 @@ int calcAndWriteFirst(int choice_sort, vector<pair<pair<string, int>, pair<strin
             std::copy(first_arr, first_arr + size, copied_arr);
             std::fstream fout;
             fout.open("input - 1.txt", ios::out | ios::app);
-            fout << "Before" << "\n";
+            fout << "Before"
+                 << "\n";
             for (int k = 0; k < size; ++k) {
                 fout << copied_arr[k] << " ";
             }
-            fout << "\n" << "After" << "\n\n";
+            fout << "\n"
+                 << "After"
+                 << "\n\n";
             auto result = sortAndCountTime(j + 1, size, copied_arr);
             first_loop.push_back({make_pair(choiceRandomArray(i), size), result});
             for (int k = 0; k < size; ++k) {
                 fout << copied_arr[k] << " ";
             }
-            fout << "\n" << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << "\n\n";
+            fout << "\n"
+                 << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << "\n\n";
             fout.close();
         }
     } else {
         std::fstream fout;
         fout.open("input - 1.txt", ios::out | ios::app);
-        fout << "Before" << "\n";
+        fout << "Before"
+             << "\n";
         for (int k = 0; k < size; ++k) {
             fout << first_arr[k] << " ";
         }
-        fout << "\n" << "After" << "\n";
+        fout << "\n"
+             << "After"
+             << "\n";
         auto result = sortAndCountTime(choice_sort, size, first_arr);
         first_loop.push_back({std::make_pair(choiceRandomArray(i), size), result});
         for (int k = 0; k < size; ++k) {
             fout << first_arr[k] << " ";
         }
-        fout << "\n" << "Is sorted: " << (arraySortedOrNot(first_arr, size) ? "Yes" : "No") << "\n\n";
+        fout << "\n"
+             << "Is sorted: " << (arraySortedOrNot(first_arr, size) ? "Yes" : "No") << "\n\n";
     }
     return size;
 }
-
 
 pair<string, int64_t> sortAndCountTime(int choice_sort, int start_first, int *first_arr) {
     auto begin = std::chrono::steady_clock::now();
@@ -206,20 +235,36 @@ pair<string, int64_t> sortAndCountTime(int choice_sort, int start_first, int *fi
 }
 
 void sortInformation() {
-    cout << "===== Available sort algorithms =====" << "\n";
-    cout << "[1] - Selection sort" << "\n";
-    cout << "[2] - Bubble sort" << "\n";
-    cout << "[3] - Bubble sort v 1" << "\n";
-    cout << "[4] - Bubble sort v 1 and 2" << "\n";
-    cout << "[5] - Insertion sort" << "\n";
-    cout << "[6] - Binary insertion sort" << "\n";
-    cout << "[7] - Counting sort" << "\n";
-    cout << "[8] - Radix sort" << "\n";
-    cout << "[9] - Merge sort" << "\n";
-    cout << "[10] - QuickSort (Hoare partition)" << "\n";
-    cout << "[11] - QuickSort (Lomuto partition)" << "\n";
-    cout << "[12] - HeapSort" << "\n";
-    cout << "[13] - Choose all sort algorithms" << "\n";
-    cout << "By default program choose - [13]" << "\n";
-    cout << "=================================" << "\n";
+    cout << "===== Available sort algorithms ====="
+         << "\n";
+    cout << "[1] - Selection sort"
+         << "\n";
+    cout << "[2] - Bubble sort"
+         << "\n";
+    cout << "[3] - Bubble sort v 1"
+         << "\n";
+    cout << "[4] - Bubble sort v 1 and 2"
+         << "\n";
+    cout << "[5] - Insertion sort"
+         << "\n";
+    cout << "[6] - Binary insertion sort"
+         << "\n";
+    cout << "[7] - Counting sort"
+         << "\n";
+    cout << "[8] - Radix sort"
+         << "\n";
+    cout << "[9] - Merge sort"
+         << "\n";
+    cout << "[10] - QuickSort (Hoare partition)"
+         << "\n";
+    cout << "[11] - QuickSort (Lomuto partition)"
+         << "\n";
+    cout << "[12] - HeapSort"
+         << "\n";
+    cout << "[13] - Choose all sort algorithms"
+         << "\n";
+    cout << "By default program choose - [13]"
+         << "\n";
+    cout << "================================="
+         << "\n";
 }
