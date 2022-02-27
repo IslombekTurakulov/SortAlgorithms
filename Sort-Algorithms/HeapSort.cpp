@@ -4,6 +4,13 @@
 
 #include <algorithm>
 
+/**
+ * Пирамидальная сортировка
+ *
+ * @param heap_arr массив
+ * @param length размерность массива
+ * @param index индекс в массиве
+ */
 void heapSort(int *heap_arr, int length, int index) {
     int max_index = index;
     int left = 2 * index + 1;
@@ -20,6 +27,12 @@ void heapSort(int *heap_arr, int length, int index) {
     }
 }
 
+/**
+ * Метод итерации по сортировке
+ *
+ * @param arr массив
+ * @param length размерность массива
+ */
 void startHeapSort(int *arr, int length) {
     int index = length / 2 - 1;
     while (index >= 0) {

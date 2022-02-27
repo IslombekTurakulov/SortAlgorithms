@@ -5,6 +5,14 @@
 #include <utility>
 #include <algorithm>
 
+/**
+ * Нахождение pivot для левой и правой границы
+ *
+ * @param arr массив
+ * @param low левая граница
+ * @param high правая граница
+ * @return левая и правая границы
+ */
 std::pair<int, int> hoarePartition(int *arr, int low, int high) {
     int partition = arr[(low + high) / 2];
     int right = high;
@@ -26,6 +34,13 @@ std::pair<int, int> hoarePartition(int *arr, int low, int high) {
     return std::make_pair(left, right);
 }
 
+/**
+ * Быстрая сортировка разбиение Хоара
+ *
+ * @param arr массив
+ * @param left левая граница
+ * @param right правая граница
+ */
 void hoareQuickSort(int *arr, int left, int right) {
     if (left < right) {
         auto pivot = hoarePartition(arr, left, right);
@@ -38,6 +53,14 @@ void hoareQuickSort(int *arr, int left, int right) {
     }
 }
 
+/**
+ * Нахождение pivot
+ *
+ * @param arr массив
+ * @param first левая граница
+ * @param last правая граница
+ * @return выбранное число из массива
+ */
 int lomutoPartition(int *arr, int first, int last) {
     int pivot = arr[last];
     int index = first;
@@ -51,6 +74,13 @@ int lomutoPartition(int *arr, int first, int last) {
     return index;
 }
 
+/**
+ * Быстрая сортировка разбиение Ломуто
+ *
+ * @param arr  массив
+ * @param left левая граница
+ * @param right правая граница
+ */
 void lomutoQuickSort(int *arr, int left, int right) {
     if (left < right) {
         int pivot = lomutoPartition(arr, left, right);

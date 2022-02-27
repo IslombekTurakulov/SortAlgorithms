@@ -2,6 +2,14 @@
 // Created by Islam on 21.02.2022.
 //
 
+/**
+ * Сортировка слиянием
+ *
+ * @param arr массив
+ * @param first левая граница
+ * @param second правая граница
+ * @param end размерность массива
+ */
 void merge(int *arr, int first, int second, int end) {
     int left_size = second - first + 1;
     int right_size = end - second;
@@ -38,6 +46,13 @@ void merge(int *arr, int first, int second, int end) {
     delete[] right_arr;
 }
 
+/**
+ * Рекурсия вызова сортировки и нахождения pivot
+ *
+ * @param arr
+ * @param left
+ * @param right
+ */
 void mergePivot(int *arr, int left, int right) {
     if (left < right) {
         int middle = (left + right) / 2;

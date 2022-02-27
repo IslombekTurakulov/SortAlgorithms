@@ -5,6 +5,12 @@
 #include <algorithm>
 #include <utility>
 
+/**
+ * Сортировка вставками
+ *
+ * @param array массив
+ * @param length размерность массива
+ */
 void defaultSortArray(int *array, int length) {
     for (int first_index = 1; first_index < length; ++first_index) {
         for (int j = first_index; j > 0 && array[j - 1] > array[j]; --j) {
@@ -21,6 +27,12 @@ int methodSearch(int left, int right, int temp, int *array) {
     return left;
 }
 
+/**
+ * Бинарная сортировка вставками
+ *
+ * @param array массив
+ * @param length размерность массива
+ */
 void binarySortArray(int *array, int length) {
     for (int first_index = 1; first_index < length; ++first_index) {
         if (array[first_index - 1] > array[first_index]) {

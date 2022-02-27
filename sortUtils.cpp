@@ -7,6 +7,14 @@
 #include <algorithm>
 #include <iostream>
 
+/**
+ * Метод, который сортирует массив
+ *
+ * @param array массив
+ * @param choice_sort выбор режима сортировки
+ * @param length размерность
+ * @return строка с выбранной сортировкой
+ */
 std::string takeTheSort(int *array, int choice_sort, int length) {
     std::string nameOfSort;
     if (choice_sort == 1) {
@@ -49,6 +57,13 @@ std::string takeTheSort(int *array, int choice_sort, int length) {
     return nameOfSort;
 }
 
+/**
+ * Метод, который позволяет узнать, отсортирован ли массив или нет
+ *
+ * @param arr массив
+ * @param n размерность
+ * @return  1 или 0 аналог True/False
+ */
 int arraySortedOrNot(int *arr, int n) {
     if (n == 1 || n == 0) {
         return 1;

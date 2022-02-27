@@ -5,6 +5,13 @@
 #include <algorithm>
 #include <vector>
 
+/**
+ * Метод для нахождения максимального элемента в массиве.
+ *
+ * @param n  размерность массива
+ * @param arr массив
+ * @return максимальный элемент в массиве
+ */
 int getMax(int n, int *arr) {
     int res = arr[0];
     for (int i = 1; i < n; ++i) {
@@ -13,6 +20,12 @@ int getMax(int n, int *arr) {
     return res;
 }
 
+/**
+ * Сортировка подсчётом
+ *
+ * @param arr массив
+ * @param length размерность массива
+ */
 void countingSortArray(int *arr, int length) {
     auto max_length = getMax(length, arr);
     int *second = new int[max_length + 1];
@@ -31,6 +44,12 @@ void countingSortArray(int *arr, int length) {
     }
 }
 
+/**
+ * Цифровая сортировка
+ *
+ * @param array массив
+ * @param length размерность массива
+ */
 void radixSort(int *array, int length) {
     int exp = 1;
     std::vector<int> second(length * 4);
