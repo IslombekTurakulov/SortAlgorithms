@@ -42,6 +42,7 @@ void countingSortArray(int *arr, int length) {
             ++index;
         }
     }
+    delete[] second;
 }
 
 /**

@@ -67,6 +67,7 @@ void writeCsvToSecondFile(int choice_sort,
 
 int main() {
     std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
     // Отображение доступных сортировок
     sortInformation();
     // Ввод цифры
@@ -94,6 +95,8 @@ int main() {
             chooseArray(first_arr, mode, size);
             // Вызов метода, который выполняет запись (не-)отсортированных элементов
             size = calcAndWriteFirst(choice_sort, first_loop, mode, first_arr, size);
+            delete[] first_arr;
+            first_arr = nullptr;
         }
         int start_second = 100;
         int end_second = 4100;
@@ -106,6 +109,8 @@ int main() {
             }
             chooseArray(second_arr, mode, size);
             size = calcAndWriteSecond(choice_sort, second_loop, mode, second_arr, size);
+            delete[] second_arr;
+            second_arr = nullptr;
         }
         percentage += 20;
         cout << "Progress: " << percentage << "%"
@@ -118,7 +123,8 @@ int main() {
     cout << "Done! Files are located to the cmake-build-debug directory" << std::endl;
     auto end = steady_clock::now();
     auto elapsed_ms = duration_cast<std::chrono::seconds>(end - begin);
-    cout << "Overall time: " << elapsed_ms.count() << " seconds" << '\n';
+    cout << "Overall time: " << elapsed_ms.count() << " seconds"
+         << "\n";
     return 0;
 }
 
@@ -187,8 +193,8 @@ int calcAndWriteSecond(int choice_sort,
                 fout << copied_arr[k] << " ";
             }
             fout << "\n"
-                 << "After" << std::endl
-                 << std::endl;
+                 << "After"
+                 << "\n\n";
             // Происходит сортировка массива и вывод через pair<T, T> результат времени.
             auto result = sortAndCountTime(sort_iteration + 1, size, copied_arr);
             // Записывается в некий список в котором лежат следующие данные:
@@ -199,10 +205,9 @@ int calcAndWriteSecond(int choice_sort,
                 fout << copied_arr[k] << " ";
             }
             fout << "\n"
-                 << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No")
-                 << std::endl
-                 << std::endl;
+                 << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << "\n\n";
             fout.close();
+            delete[] copied_arr;
         }
     } else {
         // Открываем поток и записываем первоначальный результат массива.
@@ -278,6 +283,7 @@ int calcAndWriteFirst(int choice_sort,
             fout << "\n"
                  << "Is sorted: " << (arraySortedOrNot(copied_arr, size) ? "Yes" : "No") << "\n\n";
             fout.close();
+            delete[] copied_arr;
         }
     } else {
         // Открываем поток и записываем первоначальный результат массива.
