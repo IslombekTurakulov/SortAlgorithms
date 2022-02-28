@@ -144,6 +144,27 @@ All the possible values for `<input>` is integer.
 Взаимодействие:	Windows Feature Experience Pack 120.2212.4170.0
 ```
 
+Для проверки использован Ubuntu
+
+```
+$ g++ --version
+g++ (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions. 
+There is NO warranty; 
+not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.3 LTS
+Release:	20.04
+Codename:	focal
+
+$ uname -a
+Linux islam-VirtualBox 5.11.0-40-generic #44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+```
+
 ### O(k+n)
 
 Radix и Counting Sort возглавляют список, когда дело доходит до низкого времени выполнения, но за это приходится платить
