@@ -14,7 +14,7 @@
  */
 int parseInteger() {
     std::string input;
-    int in = 0;
+    int in;
     bool is_correct_input = true;
     std::cout << "Type here: ";
     do {
@@ -98,7 +98,6 @@ void chooseArray(int *arr, int index, int length) {
         }
     }
 }
-
 
 /**
  * Метод, который подсказывает который сейчас режим был выбран.

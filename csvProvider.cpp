@@ -32,9 +32,10 @@ void writeToFile(int choice_sort,
                  fstream *fout) {
     bool is_size_has_written = false;
     for (auto &row : first_loop) {
-        if (choice_sort <= 0 || choice_sort >= 13) {
+        if (choice_sort >= 13) {
             if (!is_size_has_written) {
-                (*fout) << row.first.first << ';' << row.first.second << ';' << row.second.second << ';';
+                (*fout) << row.first.first << ';' << row.first.second << ';' << row.second.second
+                        << ';';
                 is_size_has_written = true;
             } else {
                 if (row.second.first == "HeapSort") {

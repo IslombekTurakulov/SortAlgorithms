@@ -67,7 +67,6 @@ void writeCsvToSecondFile(int choice_sort,
 
 int main() {
     std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
     // Отображение доступных сортировок
     sortInformation();
     // Ввод цифры
@@ -253,7 +252,7 @@ int calcAndWriteFirst(int choice_sort,
                       vector<pair<pair<string, int>, pair<string, int64_t>>> &first_loop, int mode,
                       int *first_arr, int size) {
     // Проверка на желаемую сортировку.
-    if (choice_sort <= 0 || choice_sort >= 13) {
+    if (choice_sort >= 13) {
         // Здесь происходит замера всех видов сортировки
         for (int sort_iteration = 0; sort_iteration < 12; ++sort_iteration) {
             // Массив для дальнейшей сортировки.
